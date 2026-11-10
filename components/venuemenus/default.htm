@@ -2,7 +2,7 @@
 <section class="venue-menu">
     <h2>{{ menu.name }}</h2>
     {% for image in menu.images %}
-        <img src="{{ image.path }}" alt="{{ menu.name }}" loading="lazy">
+        <img src="{{ image.path }}" alt="{{ image.description ?: image.title ?: menu.name }}" title="{{ image.title }}" loading="lazy">
     {% endfor %}
     {% for section in menu.sections %}
         <h3>{{ section.name }}</h3>
