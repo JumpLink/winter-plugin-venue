@@ -1,0 +1,20 @@
+fields:
+    question:
+        label: jumplink.venue::lang.faq.question
+        required: true
+    answer:
+        label: jumplink.venue::lang.faq.answer
+        type: textarea
+        size: large
+        required: true
+    assistant_may_say:
+        label: jumplink.venue::lang.faq.assistant_may_say
+        type: switch
+        span: left
+        default: true
+        comment: jumplink.venue::lang.faq.assistant_may_say_comment
+    is_active:
+        label: jumplink.venue::lang.faq.is_active
+        type: switch
+        span: right
+        default: true

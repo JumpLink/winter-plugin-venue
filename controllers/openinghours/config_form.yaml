@@ -1,0 +1,14 @@
+name: jumplink.venue::lang.hours.label
+form: $/jumplink/venue/models/openinghours/fields.yaml
+modelClass: JumpLink\Venue\Models\OpeningHours
+defaultRedirect: jumplink/venue/openinghours
+
+create:
+    title: backend::lang.form.create_title
+    redirect: jumplink/venue/openinghours/update/:id
+    redirectClose: jumplink/venue/openinghours
+
+update:
+    title: backend::lang.form.update_title
+    redirect: jumplink/venue/openinghours
+    redirectClose: jumplink/venue/openinghours

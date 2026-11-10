@@ -1,0 +1,51 @@
+fields:
+    kind:
+        label: jumplink.venue::lang.hours.kind
+        type: dropdown
+        span: left
+        default: regular
+    name:
+        label: jumplink.venue::lang.hours.name
+        span: right
+        comment: jumplink.venue::lang.hours.name_comment
+    days:
+        label: jumplink.venue::lang.hours.days
+        type: checkboxlist
+        quickselect: true
+        comment: jumplink.venue::lang.hours.days_comment
+    is_closed:
+        label: jumplink.venue::lang.hours.is_closed
+        type: switch
+    opens:
+        label: jumplink.venue::lang.hours.opens
+        type: text
+        span: left
+        placeholder: '17:00'
+        comment: jumplink.venue::lang.hours.time_comment
+        trigger:
+            action: hide
+            field: is_closed
+            condition: checked
+    closes:
+        label: jumplink.venue::lang.hours.closes
+        type: text
+        span: right
+        placeholder: '21:00'
+        trigger:
+            action: hide
+            field: is_closed
+            condition: checked
+    valid_from:
+        label: jumplink.venue::lang.hours.valid_from
+        type: datepicker
+        mode: date
+        span: left
+        comment: jumplink.venue::lang.hours.valid_comment
+    valid_through:
+        label: jumplink.venue::lang.hours.valid_through
+        type: datepicker
+        mode: date
+        span: right
+    description:
+        label: jumplink.venue::lang.hours.description
+        comment: jumplink.venue::lang.hours.description_comment

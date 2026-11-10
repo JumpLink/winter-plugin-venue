@@ -1,0 +1,5 @@
+title: jumplink.venue::lang.faq.label
+modelClass: JumpLink\Venue\Models\Faq
+toolbar:
+    buttons: reorder_toolbar
+nameFrom: question

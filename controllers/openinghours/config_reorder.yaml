@@ -1,0 +1,5 @@
+title: jumplink.venue::lang.hours.label
+modelClass: JumpLink\Venue\Models\OpeningHours
+toolbar:
+    buttons: reorder_toolbar
+nameFrom: name

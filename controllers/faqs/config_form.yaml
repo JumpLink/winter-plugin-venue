@@ -1,0 +1,14 @@
+name: jumplink.venue::lang.faq.label
+form: $/jumplink/venue/models/faq/fields.yaml
+modelClass: JumpLink\Venue\Models\Faq
+defaultRedirect: jumplink/venue/faqs
+
+create:
+    title: backend::lang.form.create_title
+    redirect: jumplink/venue/faqs/update/:id
+    redirectClose: jumplink/venue/faqs
+
+update:
+    title: backend::lang.form.update_title
+    redirect: jumplink/venue/faqs
+    redirectClose: jumplink/venue/faqs

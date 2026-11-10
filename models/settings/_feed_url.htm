@@ -1,0 +1,5 @@
+<div class="form-group">
+    <label><?= e(trans('jumplink.venue::lang.settings.feed_url')) ?></label>
+    <input type="text" class="form-control" readonly value="<?= e(url('api/jumplink/venue/feed')) ?>" onfocus="this.select()">
+    <p class="help-block"><?= e(trans('jumplink.venue::lang.settings.feed_url_comment')) ?></p>
+</div>

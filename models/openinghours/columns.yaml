@@ -1,0 +1,18 @@
+columns:
+    kind:
+        label: jumplink.venue::lang.hours.kind
+        type: partial
+        path: column_kind
+    name:
+        label: jumplink.venue::lang.hours.name
+        searchable: true
+    opens:
+        label: jumplink.venue::lang.hours.opens
+    closes:
+        label: jumplink.venue::lang.hours.closes
+    valid_from:
+        label: jumplink.venue::lang.hours.valid_from
+        type: date
+    valid_through:
+        label: jumplink.venue::lang.hours.valid_through
+        type: date
