@@ -1,0 +1,21 @@
+{% for menu in __SELF__.menus %}
+<section class="venue-menu">
+    <h2>{{ menu.name }}</h2>
+    {% for image in menu.images %}
+        <img src="{{ image.path }}" alt="{{ menu.name }}" loading="lazy">
+    {% endfor %}
+    {% for section in menu.sections %}
+        <h3>{{ section.name }}</h3>
+        {% if section.description %}<p>{{ section.description }}</p>{% endif %}
+        <ul>
+            {% for item in section.items %}
+            <li>
+                <strong>{{ item.name }}</strong>
+                {% if item.price %}<span class="venue-price">{{ item.price }}</span>{% endif %}
+                {% if item.description %}<br>{{ item.description }}{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</section>
+{% endfor %}

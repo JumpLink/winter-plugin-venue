@@ -1,0 +1,10 @@
+columns:
+    question:
+        label: jumplink.venue::lang.faq.question
+        searchable: true
+    assistant_may_say:
+        label: jumplink.venue::lang.faq.assistant_may_say
+        type: switch
+    is_active:
+        label: jumplink.venue::lang.faq.is_active
+        type: switch

@@ -1,0 +1,41 @@
+fields:
+    name:
+        label: jumplink.venue::lang.settings.name
+        span: left
+    url:
+        label: jumplink.venue::lang.settings.url
+        span: right
+        placeholder: https://
+    description:
+        label: jumplink.venue::lang.settings.about
+        type: textarea
+        size: small
+        comment: jumplink.venue::lang.settings.about_comment
+    street:
+        label: jumplink.venue::lang.settings.street
+        span: left
+    postal_code:
+        label: jumplink.venue::lang.settings.postal_code
+        span: auto
+    locality:
+        label: jumplink.venue::lang.settings.locality
+        span: auto
+    time_zone:
+        label: jumplink.venue::lang.settings.time_zone
+        span: auto
+        comment: jumplink.venue::lang.settings.time_zone_comment
+    language:
+        label: jumplink.venue::lang.settings.language
+        span: auto
+        comment: jumplink.venue::lang.settings.language_comment
+    currency:
+        label: jumplink.venue::lang.settings.currency
+        span: auto
+    schema_type:
+        label: jumplink.venue::lang.settings.schema_type
+        span: auto
+        comment: jumplink.venue::lang.settings.schema_type_comment
+    feed_url:
+        label: jumplink.venue::lang.settings.feed_url
+        type: partial
+        path: $/jumplink/venue/models/settings/_feed_url.htm

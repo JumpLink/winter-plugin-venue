@@ -1,0 +1,7 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('jumplink/venue/openinghours') ?>"><?= e(trans('jumplink.venue::lang.hours.label')) ?></a></li>
+        <li><?= e(trans($this->pageTitle)) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+<?= $this->reorderRender() ?>

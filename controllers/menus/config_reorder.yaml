@@ -1,0 +1,5 @@
+title: jumplink.venue::lang.menus.label
+modelClass: JumpLink\Venue\Models\Menu
+toolbar:
+    buttons: reorder_toolbar
+nameFrom: name

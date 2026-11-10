@@ -1,0 +1,3 @@
+1.0.0:
+    - "First release: menus, opening hours, questions and the knowledge feed."
+    - create_tables.php

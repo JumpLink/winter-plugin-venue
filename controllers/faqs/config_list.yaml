@@ -1,0 +1,15 @@
+title: jumplink.venue::lang.faq.label
+list: $/jumplink/venue/models/faq/columns.yaml
+modelClass: JumpLink\Venue\Models\Faq
+recordUrl: jumplink/venue/faqs/update/:id
+noRecordsMessage: backend::lang.list.no_records
+showCheckboxes: true
+showSorting: false
+recordsPerPage: 50
+defaultSort:
+    column: sort_order
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

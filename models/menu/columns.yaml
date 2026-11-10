@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: jumplink.venue::lang.menus.name
+        searchable: true
+    valid_from:
+        label: jumplink.venue::lang.menus.valid_from
+        type: date
+    valid_through:
+        label: jumplink.venue::lang.menus.valid_through
+        type: date
+    is_active:
+        label: jumplink.venue::lang.menus.is_active
+        type: switch

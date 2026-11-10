@@ -1,0 +1,63 @@
+fields:
+    name:
+        label: jumplink.venue::lang.menus.name
+        span: left
+        required: true
+    is_active:
+        label: jumplink.venue::lang.menus.is_active
+        type: switch
+        span: right
+        default: true
+    description:
+        label: jumplink.venue::lang.menus.description
+        type: textarea
+        size: large
+        required: true
+        comment: jumplink.venue::lang.menus.description_comment
+    valid_from:
+        label: jumplink.venue::lang.menus.valid_from
+        type: datepicker
+        mode: date
+        span: left
+        comment: jumplink.venue::lang.menus.valid_comment
+    valid_through:
+        label: jumplink.venue::lang.menus.valid_through
+        type: datepicker
+        mode: date
+        span: right
+    images:
+        label: jumplink.venue::lang.menus.images
+        type: fileupload
+        mode: image
+        imageWidth: 200
+        imageHeight: 200
+        comment: jumplink.venue::lang.menus.images_comment
+    sections:
+        label: jumplink.venue::lang.menus.sections
+        type: repeater
+        prompt: jumplink.venue::lang.menus.add_section
+        titleFrom: name
+        form:
+            fields:
+                name:
+                    label: jumplink.venue::lang.menus.section_name
+                    span: left
+                description:
+                    label: jumplink.venue::lang.menus.section_description
+                    span: right
+                items:
+                    label: jumplink.venue::lang.menus.items
+                    type: repeater
+                    prompt: jumplink.venue::lang.menus.add_item
+                    titleFrom: name
+                    form:
+                        fields:
+                            name:
+                                label: jumplink.venue::lang.menus.item_name
+                                span: left
+                            price:
+                                label: jumplink.venue::lang.menus.item_price
+                                span: right
+                                comment: jumplink.venue::lang.menus.item_price_comment
+                            description:
+                                label: jumplink.venue::lang.menus.item_description
