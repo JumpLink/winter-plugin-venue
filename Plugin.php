@@ -24,6 +24,7 @@ class Plugin extends PluginBase
     {
         return [
             \JumpLink\Venue\Components\VenueMenus::class => 'venueMenus',
+            \JumpLink\Venue\Components\VenueHours::class => 'venueHours',
             \JumpLink\Venue\Components\VenueJsonLd::class => 'venueJsonLd',
         ];
     }

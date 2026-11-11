@@ -2,7 +2,10 @@
 
 use Model;
 
-/** Opening hours: a regular entry, or an exception that applies instead of it for a period. */
+/**
+ * Opening hours: a regular entry, an exception that applies instead of it for a period, or the hours
+ * of every public holiday (shown on the page; schema.org has no way to say "holiday", so not in the feed).
+ */
 class OpeningHours extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
@@ -11,14 +14,14 @@ class OpeningHours extends Model
     public $table = 'jumplink_venue_opening_hours';
 
     public $rules = [
-        'kind' => 'required|in:regular,exception',
+        'kind' => 'required|in:regular,exception,holiday',
         'opens' => 'required|regex:/^\d{2}:\d{2}(:\d{2})?$/',
         'closes' => 'required|regex:/^\d{2}:\d{2}(:\d{2})?$/',
         'valid_from' => 'required_if:kind,exception|nullable|date',
         'valid_through' => 'required_if:kind,exception|nullable|date|after_or_equal:valid_from',
     ];
 
-    public $fillable = ['kind', 'name', 'description', 'days', 'is_closed', 'opens', 'closes', 'valid_from', 'valid_through', 'sort_order'];
+    public $fillable = ['kind', 'name', 'description', 'season', 'period_text', 'days', 'is_closed', 'opens', 'closes', 'valid_from', 'valid_through', 'sort_order'];
 
     protected $jsonable = ['days'];
 
@@ -44,6 +47,7 @@ class OpeningHours extends Model
         return [
             'regular' => 'jumplink.venue::lang.hours.kind_regular',
             'exception' => 'jumplink.venue::lang.hours.kind_exception',
+            'holiday' => 'jumplink.venue::lang.hours.kind_holiday',
         ];
     }
 

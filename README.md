@@ -25,7 +25,7 @@ Then open **Settings → Venue** and fill in the name, address, time zone and la
 | Backend page | What it holds |
 |---|---|
 | Menus | Name, a **required note for the AI assistant**, validity dates, pictures of the printed card, sections with dishes and prices |
-| Opening hours | Regular hours, and exceptions (holidays, closed days) that apply instead for a period |
+| Opening hours | Regular hours with an optional season heading, exceptions (closed days, Christmas) that apply instead for a period, and the hours of every public holiday (page only; schema.org has no way to say it) |
 | Questions | Question and answer pairs; one can be kept for the website only |
 
 A menu without its note for the assistant is not published in the feed. The assistant cannot judge
@@ -47,6 +47,7 @@ Point sprechstunde at the address shown under **Settings → Venue** (source kin
 
 ```twig
 {% component 'venueMenus' %}     {# menus valid today, as HTML #}
+{% component 'venueHours' %}     {# opening hours from today on, by season, as HTML #}
 {% component 'venueJsonLd' %}    {# schema.org JSON-LD for the page head #}
 ```
 
