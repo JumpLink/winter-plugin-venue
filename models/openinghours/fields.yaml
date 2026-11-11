@@ -46,6 +46,14 @@ fields:
         type: datepicker
         mode: date
         span: right
+    season:
+        label: jumplink.venue::lang.hours.season
+        comment: jumplink.venue::lang.hours.season_comment
+        span: left
+    period_text:
+        label: jumplink.venue::lang.hours.period_text
+        comment: jumplink.venue::lang.hours.period_text_comment
+        span: right
     description:
         label: jumplink.venue::lang.hours.description
         comment: jumplink.venue::lang.hours.description_comment

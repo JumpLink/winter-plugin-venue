@@ -1,0 +1,19 @@
+{% set hours = __SELF__.view %}
+{% for season in hours.seasons %}
+<section class="venue-season">
+    {% if season.season %}<h2>{{ season.season }}</h2>{% endif %}
+    {% if season.period %}<p>{{ season.period }}</p>{% endif %}
+    {% for service in season.services %}
+    <h3>{{ service.name }}</h3>
+    {% for line in service.lines %}<p>{% if line.days %}{{ line.days }} {% endif %}{{ line.time }}</p>{% endfor %}
+    {% if service.description %}<p>{{ service.description }}</p>{% endif %}
+    {% endfor %}
+</section>
+{% endfor %}
+{% for block in hours.exceptions %}
+<section class="venue-exception">
+    <h3>{{ block.name }}</h3>
+    {% if block.period %}<p>{{ block.period }}</p>{% endif %}
+    {% for line in block.lines %}<p>{{ line.service }} {% if line.closed %}{{ 'jumplink.venue::lang.hours.closed'|trans }}{% else %}{{ line.time }}{% endif %}</p>{% endfor %}
+</section>
+{% endfor %}

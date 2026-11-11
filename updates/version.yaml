@@ -1,3 +1,6 @@
 1.0.0:
     - "First release: menus, opening hours, questions and the knowledge feed."
     - create_tables.php
+1.1.0:
+    - "Opening hours: a season heading, a period text and public-holiday hours, plus the venueHours component."
+    - add_season_to_opening_hours.php
